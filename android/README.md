@@ -1,4 +1,4 @@
 # favorites
 
-this is android favorites
+this is android favorites --chenjinguang
 
