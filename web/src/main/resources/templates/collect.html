@@ -14,10 +14,10 @@
 	    <form id="collect-form">
 	      <input type="text" placeholder="url" name="url"/>
 	      <input type="text" placeholder="title" name="title"/>
-	      <input type="text" placeholder="webLogo" name="webLogo"/>
+	      <input type="text" th:value="${webLogo}"  name="webLogo"/>
 	      <input type="textarea" placeholder="description" name="description"/>
 	      <input type="text" placeholder="charset" name="charset"/>
-	      <input type="textarea" placeholder="remark" name="remark"/>
+	      <input type="textarea" placeholder="描述" name="remark"/>
 	    </form>
 	      <button onclick="collect()">collect</button>
 	  </div>
@@ -27,13 +27,11 @@
    <script th:src="@{/js/comm.js}"></script>   
    <script type='text/javascript'>
    $(function(){
-	   var request = new UrlSearch();
-	      $("input[name='url']").val(decodeURIComponent(request.url)); 
-	      $("input[name='title']").val(decodeURI(request.title)); 
-	      $("input[name='webLogo']").val(decodeURIComponent(request.url)); 
-	      $("input[name='description']").val(decodeURI(request.description)); 
-	      $("input[name='charset']").val(request.charset); 
-	      $("input[name='remark']").val(request.charset); 
+      var request = new UrlSearch();
+      $("input[name='url']").val(decodeURIComponent(request.url)); 
+      $("input[name='title']").val(decodeURI(request.title)); 
+      $("input[name='description']").val(replaceEmpty(decodeURI(request.description))); 
+      $("input[name='charset']").val(request.charset); 
 	})
       
     function collect(){

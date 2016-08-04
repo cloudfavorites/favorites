@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.favorites.domain.Collect;
 import com.favorites.domain.CollectRepository;
+import com.favorites.utils.HtmlUtil;
 
 @Controller
 @RequestMapping("/")
@@ -67,10 +68,11 @@ public class IndexController extends BaseController{
 	}
 	
 	@RequestMapping(value="/collect",method=RequestMethod.GET)
-	public String collect() {
+	public String collect(Model model,Collect collect) {
 		if(getUser()==null){
 			return "login";
 		}
+		model.addAttribute("webLogo", HtmlUtil.getLogo(collect.getUrl()));
 		return "collect";
 	}
 }

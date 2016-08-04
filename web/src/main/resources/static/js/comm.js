@@ -16,3 +16,19 @@ function UrlSearch() {
     }
 }
 
+
+function replaceEmpty(str) {
+	if(isEmpty(str)){
+		return '';
+	}
+	return str;
+}
+
+function isEmpty(str) {
+	if(str=="undefined" || str==null || string.length == 0) {
+		return true;
+	}
+	return false;
+}
+
+

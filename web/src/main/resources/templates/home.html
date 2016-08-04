@@ -13,13 +13,14 @@
 		  <div class="col-xs-3 col-md-2">
 		   <div class="user-info">xx,早上好！</div> 
 		  </div>
-		  <div class="col-xs-12 col-md-8">
-			<table class="table">
+		  <div class="col-xs-9 col-md-10">
+			<table class="table table-hover" >
 		      <caption>收藏列表</caption>
 		      <thead>
 		        <tr>
 		          <th>#</th>
-		          <th>网址</th>
+		          <th>LOGO</th>
+		          <th >网址</th>
 		          <th>标题</th>
 		          <th>描述</th>
 		          <th>时间</th>
@@ -28,6 +29,9 @@
 		      <tbody>
 		        <tr  th:each="collect,collectStat : ${collects}"> 
 		          <th scope="row" th:text="${collect.id}">1</th>
+		          <td >
+		          	<img th:src="${collect.webLogo}"/>
+		          </td>
 		          <td th:text="${collect.url}">Mark</td>
 		          <td th:text="${collect.title}">Otto</td>
 		          <td th:text="${collect.description}">@mdo</td>
