@@ -69,3 +69,7 @@
 ### 自动清除不能访问文章：###
 
 - <font color="Crimson">可以设置是否自动清除不能访问文章</font>
+
+### 智能收藏夹推荐： ###
+
+- <font color="Crimson">智能收藏夹推荐</font>
