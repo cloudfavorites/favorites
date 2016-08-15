@@ -1,20 +1,22 @@
 ## 功能点 ##
 
+备注：<font color="Aqua">已开发完成</font>  <font color="Crimson">后期或者二期完成</font>  <font color="black">开发中或待开发</font>
+
 ###用户:###
 
-- 注册：添加默认属性设置（包括添加默认收藏夹）
-- 登陆
-- 密码找回
-- 注销
+- <font color="Aqua">注册：添加默认属性设置（包括添加默认收藏夹）</font>
+- <font color="Aqua">登陆</font>
+- 密码找回（yuyang）
+- 注销（yuyang）
 
-### 个人信息维护：###
+### 个人信息维护（yuyang）：###
 
 - 密码修改
 - 简介维护
 - 头像修改
 - 用户名修改
 
-### 收藏夹：###
+### 收藏夹(dingyushuang)：###
 
 - 增
 - 删
@@ -25,17 +27,18 @@
 
 ### 收藏：###
 
-- 文章收藏 
-- 文章修改 
-- 文章删除 
-- 收藏文章窗口的简洁模式与专业模式切换
-- 公开&私有设置
-- 点赞 
-- 取消点赞
-- 评论
-- 回复评
-- 删除评论
-- 分享
+- 文章收藏 （dingyushuang）
+- 文章修改 （zhangqiang）
+- 文章删除 （zhangqiang）
+- 文章列表展示（zhangqiang）
+- 收藏文章窗口的简洁模式与专业模式切换（dingyushuang）
+- 公开&私有设置（dingyushuang）
+- 点赞 （zhangqiang）
+- 取消点赞（zhangqiang）
+- 评论（zhangqiang）
+- 回复评（zhangqiang）
+- 删除评论（zhangqiang）
+- 分享（zhangqiang）
 
 ### 消息通知：###
 
@@ -61,4 +64,8 @@
 
 ### 浏览记录：###
 
-- 列表显示最近浏览过的文章
+- <font color="Crimson">列表显示最近浏览过的文章</font>
+
+### 自动清除不能访问文章：###
+
+- <font color="Crimson">可以设置是否自动清除不能访问文章</font>
