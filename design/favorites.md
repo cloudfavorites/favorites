@@ -1,11 +1,9 @@
 ## 功能点 ##
 
-备注：<p><font color="Aqua">已开发完成</font>  <font color="Crimson">后期或者二期完成</font>  <font color="black">开发中或待开发</font></p>
-
 ###用户:###
 
-- <font color="Aqua">注册：添加默认属性设置（包括添加默认收藏夹）</font>
-- <font color="Aqua">登陆</font>
+- (DONE)注册：添加默认属性设置（包括添加默认收藏夹）</font>
+- (DONE)登陆
 - 密码找回（yuyang）
 - 注销（yuyang）
 
@@ -64,12 +62,12 @@
 
 ### 浏览记录：###
 
-- <font color="Crimson">列表显示最近浏览过的文章</font>
+- (TODO)列表显示最近浏览过的文章
 
 ### 自动清除不能访问文章：###
 
-- <font color="Crimson">可以设置是否自动清除不能访问文章</font>
+- (TODO)可以设置是否自动清除不能访问文章
 
 ### 智能收藏夹推荐： ###
 
-- <font color="Crimson">智能收藏夹推荐</font>
+- (TODO)智能收藏夹推荐
