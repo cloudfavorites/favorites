@@ -1,6 +1,6 @@
 ## 功能点 ##
 
-备注：<font color="Aqua">已开发完成</font>  <font color="Crimson">后期或者二期完成</font>  <font color="black">开发中或待开发</font>
+备注：<p><font color="Aqua">已开发完成</font>  <font color="Crimson">后期或者二期完成</font>  <font color="black">开发中或待开发</font></p>
 
 ###用户:###
 
