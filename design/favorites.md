@@ -25,7 +25,7 @@
 
 ### 收藏：###
 
-- 文章收藏 （dingyushuang）
+- （DONE）文章收藏 （dingyushuang）
 - 文章修改 （zhangqiang）
 - 文章删除 （zhangqiang）
 - 文章列表展示（zhangqiang）
@@ -37,6 +37,12 @@
 - 回复评（zhangqiang）
 - 删除评论（zhangqiang）
 - 分享（zhangqiang）
+
+### 关注&取消： ###
+
+- 关注功能
+- 取消关注功能
+- 关注&取消不同的页面效果展示
 
 ### 消息通知：###
 
