@@ -16,10 +16,10 @@
 
 ### 收藏夹(dingyushuang)：###
 
-- 增
-- 删
-- 改
-- 查
+- (DONE)增
+- (DONE)删
+- (DONE)改
+- (DONE)查
 - 导入
 - 导出
 
@@ -30,6 +30,7 @@
 - 文章删除 （zhangqiang）
 - 文章列表展示（zhangqiang）
 - 收藏文章窗口的简洁模式与专业模式切换（dingyushuang）
+- 默认收藏夹设置（dingyushuang）
 - 公开&私有设置（dingyushuang）
 - 点赞 （zhangqiang）
 - 取消点赞（zhangqiang）
