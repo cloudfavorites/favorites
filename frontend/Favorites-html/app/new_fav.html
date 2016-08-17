@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
    <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+   <link rel="stylesheet" href="../vendor/toastr/toastr.min.css">
    <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
    <link rel="stylesheet" href="css/app.css" id="maincss">
    <link rel="stylesheet" href="css/theme-i.css" id="maincss"></head>
@@ -279,7 +280,7 @@
                            <li>错误信息</li>
                         </ul>
                      </div>
-                     <button type="submit" class="btn btn-block btn-primary mt-lg">提交</button>
+                     <button type="submit" class="btn btn-block btn-primary mt-lg" id="newfavbtn">提交</button>
                   </form>
                </div>
             </div>
@@ -297,6 +298,30 @@
    <script src="../vendor/jquery/dist/jquery.js"></script>
    <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
    <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <!-- <script src="../vendor/toaster/toaster.js"></script> -->
+   <script src="../vendor/toastr/toastr.min.js"></script>
    <script src="js/app.js"></script>
+   <script type="text/javascript">
+   // $(function(){
+   //    $("#newfavbtn").click(function () {
+   //       $.toaster({
+   //          priority: 'success',
+   //          title: '操作成功',
+   //          message: '收藏夹创建成功！'
+   //       });
+   //    });
+   // })
+   $(function(){
+      $("#newfavbtn").click(function () {
+         toastr.options = {
+            'closeButton': true,
+            'positionClass': 'toast-top-center',
+            'timeOut': '5000',
+         };
+         // toastr.error('收藏夹创建失败！', '操作失败');
+         toastr.success('收藏夹创建成功！', '操作成功');
+      });
+   })
+   </script>
 </body>
 </html>

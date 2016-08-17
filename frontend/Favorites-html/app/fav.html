@@ -272,10 +272,10 @@
             <h3>
                学习
                <span class="title-small ml-sm mr-sm">(8)</span>
-               <span class="title-small icon-pencil mr-sm"></span>
+               <span data-toggle="modal" data-target="#modal-changeFavName" class="title-small clickable icon-pencil mr-sm"></span>
                <div class="pull-right">
                   <span class="title-small icon-folder-alt mr-sm"></span>
-                  <span class="title-small">删除</span>
+                  <span data-toggle="modal" data-target="#modal-removeFav" class="title-small clickable">删除</span>
                </div>
             </h3>
             <div class="row">
@@ -627,5 +627,45 @@
    <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
    <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
    <script src="js/app.js"></script>
+   <div id="modal-changeFavName" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">修改收藏夹名</h4>
+            </div>
+            <div class="modal-body">
+               <div class="form-group has-feedback">
+                  <input type="password" placeholder="新收藏夹名" class="form-control">
+                  <span class="fa fa-folder form-control-feedback text-muted"></span>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-block btn-primary mt-lg">确定</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="modal-removeFav" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">删除收藏夹名</h4>
+            </div>
+            <div class="modal-body">
+               <p>删除收藏夹将删除该收藏下所有收藏，且无法找回，是否继续？</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" data-dismiss="modal" class="btn">取消</button>
+               <button type="button" class="btn btn-danger">删除收藏夹</button>
+            </div>
+         </div>
+      </div>
+   </div>
 </body>
 </html>
