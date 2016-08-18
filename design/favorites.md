@@ -4,7 +4,7 @@
 
 - (DONE)注册：添加默认属性设置（包括添加默认收藏夹）</font>
 - (DONE)登陆
-- 密码找回（yuyang）
+- (DONE)密码找回（yuyang）
 - (DONE)注销（yuyang）
 
 ### 个人信息维护（yuyang）：###
