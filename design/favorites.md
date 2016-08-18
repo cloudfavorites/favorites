@@ -29,9 +29,9 @@
 - 文章修改 （zhangqiang）
 - 文章删除 （zhangqiang）
 - 文章列表展示（zhangqiang）
-- 收藏文章窗口的简洁模式与专业模式切换（dingyushuang）
-- 默认收藏夹设置（dingyushuang）
-- 公开&私有设置（dingyushuang）
+- (DONE)收藏文章窗口的简洁模式与专业模式切换（dingyushuang）
+- (DONE)默认收藏夹设置（dingyushuang）
+- (DONE)公开&私有设置（dingyushuang）
 - 点赞 （zhangqiang）
 - 取消点赞（zhangqiang）
 - 评论（zhangqiang）
