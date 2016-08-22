@@ -171,7 +171,7 @@
                      </a>
                      <ul id="favorites" class="nav sidebar-subnav collapse">
                         <li class="sidebar-subnav-header">收藏夹</li>
-                        <li class=" active">
+                        <li class=" ">
                            <a href="new_fav.html" title="+ 新建收藏夹">
                               <span>+ 新建收藏夹</span>
                            </a>
@@ -182,7 +182,7 @@
                               <span>学习</span>
                            </a>
                         </li>
-                        <li class=" ">
+                        <li class=" active">
                            <a href="export_fav.html" title="导出收藏夹">
                               <span>导出收藏夹</span>
                            </a>
@@ -275,17 +275,106 @@
       </aside>
       <section>
          <div class="content-wrapper">
-            <h3>新建收藏夹</h3>
+            <h3>导出收藏夹</h3>
             <div class="row">
-               <div class="col-md-3">
+               <div class="col-md-12">
                   <form action="#">
-                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="收藏夹名">
-                        <ul class="parsley-errors-list">
-                           <li>错误信息</li>
-                        </ul>
+                     <legend>请选择要导出的收藏夹</legend>
+                     <div class="row">
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 美食
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 旅行
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-3">
+                           <div class="checkbox c-checkbox needsclick">
+                              <label class="needsclick">
+                                 <input type="checkbox" class="needsclick" value="" />
+                                 <span class="fa fa-check"></span>
+                                 休闲
+                              </label>
+                           </div>
+                        </div>
                      </div>
-                     <button type="submit" class="btn btn-block btn-primary mt-lg" id="newfavbtn">提交</button>
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-block btn-primary mt-lg">确认导出</button>
+                     </div>
                   </form>
                </div>
             </div>
@@ -307,27 +396,5 @@
 -->
 <script src="../vendor/toastr/toastr.min.js"></script>
 <script src="js/app.js"></script>
-<script type="text/javascript">
-   // $(function(){
-   //    $("#newfavbtn").click(function () {
-   //       $.toaster({
-   //          priority: 'success',
-   //          title: '操作成功',
-   //          message: '收藏夹创建成功！'
-   //       });
-   //    });
-   // })
-   $(function(){
-      $("#newfavbtn").click(function () {
-         toastr.options = {
-            'closeButton': true,
-            'positionClass': 'toast-top-center',
-            'timeOut': '5000',
-         };
-         // toastr.error('收藏夹创建失败！', '操作失败');
-         toastr.success('收藏夹创建成功！', '操作成功');
-      });
-   })
-   </script>
 </body>
 </html>
