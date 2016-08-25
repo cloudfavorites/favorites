@@ -25,15 +25,15 @@
 
 ### 收藏：###
 
-- （DONE）文章收藏 （dingyushuang）
+- (DONE)文章收藏 （dingyushuang）
 - (DONE)文章修改 
 - (DONE)文章删除 
-- (DONE)文章列表展示
+-  文章列表展示(zhangqiang)
 - (DONE)收藏文章窗口的简洁模式与专业模式切换（dingyushuang）
 - (DONE)默认收藏夹设置（dingyushuang）
 - (DONE)公开&私有设置（dingyushuang）
-- 点赞 （zhangqiang）
-- 取消点赞（zhangqiang）
+- (DONE)点赞 
+- (DONE)取消点赞
 - 评论（zhangqiang）
 - 回复评（zhangqiang）
 - 删除评论（zhangqiang）
