@@ -42,11 +42,12 @@
                   <li class="dropdown dropdown-list">
                      <a href="#" data-toggle="dropdown" title="消息通知">
                         <em class="icon-bell"></em>
+                        <div class="label label-danger">3</div>
                      </a>
                      <ul class="dropdown-menu animated flipInX">
                         <li>
                            <div class="list-group">
-                              <a href="#" class="list-group-item">
+                              <a href="at_me.html" class="list-group-item">
                                  <div class="media-box">
                                     <div class="pull-left">
                                        <em class="fa fa-at fa-2x text-info"></em>
@@ -59,7 +60,7 @@
                                     </div>
                                  </div>
                               </a>
-                              <a href="#" class="list-group-item">
+                              <a href="comment_me.html" class="list-group-item">
                                  <div class="media-box">
                                     <div class="pull-left">
                                        <em class="fa fa-comment fa-2x text-warning"></em>
@@ -359,7 +360,7 @@
                                     <a href="#" class="normal-color-a ng-binding">未读列表</a>
                                     <div class="pull-right hidden-xxs">
                                        <small>
-                                          <a class="sharing-action-button">
+                                          <a class="sharing-action-button btn-share">
                                              <span class="fa fa-share-alt"></span>
                                              分享
                                           </a>
@@ -374,7 +375,7 @@
                                              取消点赞
                                           </a>
                                           |
-                                          <a class="sharing-action-button">
+                                          <a class="sharing-action-button btn-comment" href="javascript:void(0);">
                                              <span class="fa fa-comment-o"></span>
                                              评论(0)
                                           </a>
@@ -384,6 +385,74 @@
                                              挖一口
                                           </a>
                                        </small>
+                                    </div>
+                                 </div>
+                                 <div class="collapse">
+                                    <div class="media bb p">
+                                       <small class="pull-right text-muted">21分钟前</small>
+                                       <div class="pull-left">
+                                          <img src="img/dummy.png" alt="" class="media-object img-circle thumb32"></div>
+                                       <div class="media-body">
+                                          <span class="media-heading">
+                                             <p class="m0">
+                                                <a href="#">456def</a>
+                                             </p>
+                                             <p class="m0 text-muted">
+                                                test评论
+                                                <small>
+                                                   <a href="#">回复</a>
+                                                </small>
+                                             </p>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class="media bb p">
+                                       <small class="pull-right text-muted">21分钟前</small>
+                                       <div class="pull-left">
+                                          <img src="img/dummy.png" alt="" class="media-object img-circle thumb32"></div>
+                                       <div class="media-body">
+                                          <span class="media-heading">
+                                             <p class="m0">
+                                                <a href="#">abc123</a>
+                                             </p>
+                                             <p class="m0 text-muted">
+                                                test评论
+                                                <small>
+                                                   <a href="#">删除</a>
+                                                </small>
+                                             </p>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class="media bb p">
+                                       <small class="pull-right text-muted">21分钟前</small>
+                                       <div class="pull-left">
+                                          <img src="img/dummy.png" alt="" class="media-object img-circle thumb32"></div>
+                                       <div class="media-body">
+                                          <span class="media-heading">
+                                             <p class="m0">
+                                                <a href="#">abc123</a>
+                                             </p>
+                                             <p class="m0 text-muted">
+                                                test评论
+                                                <small>
+                                                   <a href="#">删除</a>
+                                                </small>
+                                             </p>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class="media p0">
+                                       <div class="media-body">
+                                          <form>
+                                             <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="输入评论...">
+                                                <span class="input-group-btn">
+                                                   <button type="submit" class="btn btn-default">发送</button>
+                                                </span>
+                                             </div>
+                                          </form>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
@@ -469,7 +538,7 @@
                                     <a href="#" class="normal-color-a ng-binding">未读列表</a>
                                     <div class="pull-right hidden-xxs">
                                        <small>
-                                          <a class="sharing-action-button">
+                                          <a class="sharing-action-button btn-share">
                                              <span class="fa fa-share-alt"></span>
                                              分享
                                           </a>
@@ -484,7 +553,7 @@
                                              取消点赞
                                           </a>
                                           |
-                                          <a class="sharing-action-button">
+                                          <a class="sharing-action-button btn-comment">
                                              <span class="fa fa-comment-o"></span>
                                              评论(0)
                                           </a>
@@ -772,5 +841,19 @@
          </div>
       </div>
    </div>
+   <script>
+      $(document).ready(function(){
+         $(".timeline-alt li").each(function(){
+            var _this = $(this);
+            _this.find(".m0 .btn-comment").click(function(){
+               if(_this.find(".collapse").hasClass('in')){
+                  _this.find(".collapse").removeClass('in')
+               }else{
+                  _this.find(".collapse").addClass('in')
+               }
+            });
+         });
+      });
+   </script>
 </body>
 </html>
