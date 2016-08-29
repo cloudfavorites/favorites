@@ -34,9 +34,9 @@
 - (DONE)公开&私有设置（dingyushuang）
 - (DONE)点赞 
 - (DONE)取消点赞
-- 评论（zhangqiang）
-- 回复评（zhangqiang）
-- 删除评论（zhangqiang）
+- (DONE)评论
+- (DONE)回复评
+- (DONE)删除评论
 - 分享（zhangqiang）
 
 ### 关注&取消(dingyushuang)： ###
