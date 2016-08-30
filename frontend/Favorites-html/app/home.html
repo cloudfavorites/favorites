@@ -855,5 +855,58 @@
          });
       });
    </script>
+   <div class="-mob-share-ui-button -mob-share-open">分享</div>
+   <div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
+      <ul class="-mob-share-list">
+         <li class="-mob-share-weibo">
+            <p>新浪微博</p>
+         </li>
+         <li class="-mob-share-tencentweibo">
+            <p>腾讯微博</p>
+         </li>
+         <li class="-mob-share-qzone">
+            <p>QQ空间</p>
+         </li>
+         <li class="-mob-share-qq">
+            <p>QQ好友</p>
+         </li>
+         <li class="-mob-share-weixin">
+            <p>微信</p>
+         </li>
+         <li class="-mob-share-douban">
+            <p>豆瓣</p>
+         </li>
+         <li class="-mob-share-renren">
+            <p>人人网</p>
+         </li>
+         <li class="-mob-share-kaixin">
+            <p>开心网</p>
+         </li>
+      </ul>
+      <div class="-mob-share-close">取消</div>
+   </div>
+   <div class="-mob-share-ui-bg"></div>
+   <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=169e0a0c89b80"></script>
+   <script>
+      $(document).ready(function(){
+         $('.btn-share').each(function(){
+            $(this).click(function(){
+               mobShare.ui.open();
+               mobShare.config( {
+                   debug: false,
+                   appkey: '169e0a0c89b80',
+                   params: {
+                       url: 'https://www.baidu.com/index.php?tn=monline_3_dg',
+                       title: '分享标题',
+                       description: '分享内容',
+                       pic: '',
+                       reason:'只应用与QZone与朋友网'
+                   }
+               });
+            });
+         });
+      });
+   </script>
+   <!--MOB SHARE END-->
 </body>
 </html>
