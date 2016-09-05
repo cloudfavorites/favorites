@@ -531,7 +531,7 @@
             $cropperFile.prop('disabled', true);
          }
 
-         function getRoundedCanvas(sourceCanvas){
+         function getrectangleCanvas(sourceCanvas){
             var canvas = document.createElement('canvas');
             var context = canvas.getContext('2d');
             var width = 200;
@@ -550,14 +550,14 @@
          }
 
          $cropperSubmit.on('click', function(){
-           var croppedCanvas;
-           var roundedCanvas;
-           if(!croppable){
-             return;
-           }
-           croppedCanvas = $cropperImage.cropper('getCroppedCanvas');
-           roundedCanvas = getRoundedCanvas(croppedCanvas);
-           alert(roundedCanvas.toDataURL())
+			var croppedCanvas;
+			var rectangleCanvas;
+			if(!croppable){
+			 return;
+			}
+			croppedCanvas = $cropperImage.cropper('getCroppedCanvas');
+			rectangleCanvas = getrectangleCanvas(croppedCanvas);
+			alert(rectangleCanvas.toDataURL())
          });
 
       });
