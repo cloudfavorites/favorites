@@ -15,7 +15,7 @@
 
 - (DONE)密码修改
 - (DONE)简介维护
-- 头像修改
+- (DONE)头像修改
 - (DONE)用户名修改
 
 ### 收藏夹(dingyushuang)：###
