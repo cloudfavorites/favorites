@@ -314,6 +314,43 @@
                         </li>
                      </ul>
                   </div>
+                  <div class="slider">
+                     <ul class="slides">
+                        <li style="background-image:url(https://spoon.b0.upaiyun.com/resource_images/201701/1483319341694);">
+                           <h3>
+                              <a href="#">不用揉面、5分钟就能煎一份全家都爱吃的早餐饼！</a>
+                           </h3>
+                           <p>
+                              <a href="#">
+                                 <img src="https://spoon.b0.upaiyun.com/avatar/201607/0e7434014aca60a670463f93f710b015" />
+                                 <span>climbsky</span>
+                              </a>
+                           </p>
+                        </li>
+                        <li style="background-image:url(https://spoon.b0.upaiyun.com/resource_images/201701/1483319281658);">
+                           <h3>
+                              <a href="#">不用揉面、5分钟就能煎一份全家都爱吃的早餐饼！</a>
+                           </h3>
+                           <p>
+                              <a href="#">
+                                 <img src="https://spoon.b0.upaiyun.com/avatar/201607/0e7434014aca60a670463f93f710b015" />
+                                 <span>climbsky</span>
+                              </a>
+                           </p>
+                        </li>
+                        <li style="background-image:url(https://spoon.b0.upaiyun.com/resource_images/201701/1483319341694);">
+                           <h3>
+                              <a href="#">不用揉面、5分钟就能煎一份全家都爱吃的早餐饼！</a>
+                           </h3>
+                           <p>
+                              <a href="#">
+                                 <img src="https://spoon.b0.upaiyun.com/avatar/201607/0e7434014aca60a670463f93f710b015" />
+                                 <span>climbsky</span>
+                              </a>
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
                   <div style="margin-top: 45px;">
                      <div class="btn-group btn-xs mb pull-right" style="margin-top: -25px;">
                         <label class="btn btn-xs btn-default active">
@@ -366,13 +403,8 @@
                                              </a>
                                              |
                                              <a class="sharing-action-button">
-                                                <span class="fa fa-thumbs-o-up"></span>
-                                                点赞(0)
-                                             </a>
-                                             |
-                                             <a class="sharing-action-button">
-                                                <span class="fa fa-thumbs-up"></span>
-                                                取消点赞
+                                                <span class="fa fa-heart-o"></span>
+                                                感谢(0)
                                              </a>
                                              |
                                              <a class="sharing-action-button">
@@ -540,6 +572,18 @@
    <script src="../vendor/jquery/dist/jquery.js"></script>
    <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
    <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <script src="../vendor/jquery.flexslider/jquery.flexslider.min.js"></script>
    <script src="js/app.js"></script>
+   <script>
+   $(".slider").flexslider({
+      animation: "side",
+      slideshowSpeed: 3000,
+      pauseOnHover: true,
+      directionNav: true,
+      controlNav: true,
+      prevText: "<",
+      nextText: ">"
+   });
+</script>
 </body>
 </html>

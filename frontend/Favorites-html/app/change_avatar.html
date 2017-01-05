@@ -550,14 +550,14 @@
          }
 
          $cropperSubmit.on('click', function(){
-			var croppedCanvas;
-			var rectangleCanvas;
-			if(!croppable){
-			 return;
-			}
-			croppedCanvas = $cropperImage.cropper('getCroppedCanvas');
-			rectangleCanvas = getrectangleCanvas(croppedCanvas);
-			alert(rectangleCanvas.toDataURL())
+   			var croppedCanvas;
+   			var rectangleCanvas;
+   			if(!croppable){
+   			 return;
+   			}
+   			croppedCanvas = $cropperImage.cropper('getCroppedCanvas');
+   			rectangleCanvas = getrectangleCanvas(croppedCanvas);
+   			alert(rectangleCanvas.toDataURL())
          });
 
       });
