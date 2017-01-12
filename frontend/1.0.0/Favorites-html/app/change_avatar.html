@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="Bootstrap Admin App + jQuery">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+   <title>Favorites</title>
+   <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+   <link rel="stylesheet" href="../vendor/animate.css/animate.min.css">
+   <link rel="stylesheet" href="../vendor/cropper/cropper.min.css">
+   <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+   <link rel="stylesheet" href="css/app.css" id="maincss">
+   <link rel="stylesheet" href="css/theme-i.css" id="maincss"></head>
+<body>
+   <div class="wrapper">
+      <header class="topnavbar-wrapper">
+         <nav role="navigation" class="navbar topnavbar">
+            <div class="navbar-header">
+               <a href="signin.html" target="_blank" class="navbar-brand">
+                  <div class="brand-logo">
+                     <img src="img/logo.png" alt="App Logo" class="img-responsive"></div>
+                  <div class="brand-logo-collapsed">
+                     <img src="img/logo-single.png" alt="App Logo" class="img-responsive"></div>
+               </a>
+            </div>
+            <div class="nav-wrapper">
+               <ul class="nav navbar-nav">
+                  <li>
+                     <a href="#" data-toggle-state="aside-collapsed" class="hidden-xs" title="缩小/扩大侧栏"> <em class="fa fa-navicon"></em>
+                     </a>
+                     <a href="#" data-toggle-state="aside-toggled" data-no-persist="true" class="visible-xs sidebar-toggle" title="缩小/扩大侧栏"> <em class="fa fa-navicon"></em>
+                     </a>
+                  </li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                  <li>
+                     <a href="#" data-search-open="" title="搜索">
+                        <em class="icon-magnifier"></em>
+                     </a>
+                  </li>
+                  <li class="dropdown dropdown-list">
+                     <a href="#" data-toggle="dropdown" title="消息通知">
+                        <em class="icon-bell"></em>
+                     </a>
+                     <ul class="dropdown-menu animated flipInX">
+                        <li>
+                           <div class="list-group">
+                              <a href="#" class="list-group-item">
+                                 <div class="media-box">
+                                    <div class="pull-left">
+                                       <em class="fa fa-at fa-2x text-info"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                       <p class="m0">@我的</p>
+                                       <p class="m0 text-muted">
+                                          <small>0 条新消息</small>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </a>
+                              <a href="#" class="list-group-item">
+                                 <div class="media-box">
+                                    <div class="pull-left">
+                                       <em class="fa fa-comment fa-2x text-warning"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                       <p class="m0">评论我的</p>
+                                       <p class="m0 text-muted">
+                                          <small>0 条新评论</small>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </a>
+                              <a href="#" class="list-group-item">
+                                 <div class="media-box">
+                                    <div class="pull-left">
+                                       <em class="fa fa-thumbs-up fa-2x text-success"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                       <p class="m0">赞我的</p>
+                                       <p class="m0 text-muted">
+                                          <small>0 个新的赞</small>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </a>
+                              <a href="#" class="list-group-item">
+                                 <div class="media-box">
+                                    <div class="pull-left">
+                                       <em class="fa fa-bell fa-2x text-danger"></em>
+                                    </div>
+                                    <div class="media-box-body clearfix">
+                                       <p class="m0">群消息</p>
+                                       <p class="m0 text-muted">
+                                          <small>0 个入群邀请</small>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#" title="浏览记录">
+                        <em class="icon-clock"></em>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" title="回收站">
+                        <em class="icon-trash"></em>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" data-toggle-state="offsidebar-open" data-no-persist="true" title="设置">
+                        <em class="icon-settings"></em>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <form role="search" action="search.html" class="navbar-form">
+               <div class="form-group has-feedback">
+                  <input type="text" placeholder="输入并且按回车确定..." class="form-control">
+                  <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
+               </div>
+               <button type="submit" class="hidden btn btn-default">提交</button>
+            </form>
+         </nav>
+      </header>
+      <aside class="aside">
+         <div class="aside-inner">
+            <nav data-sidebar-anyclick-close="" class="sidebar">
+               <ul class="nav">
+                  <li class="has-user-block">
+                     <div>
+                        <div class="item user-block">
+                           <div class="user-block-picture">
+                              <div class="user-block-status">
+                                 <a href="collect.html" target="_blank">
+                                    <img src="img/dummy.png" class="img-thumbnail img-circle" alt=""></a>
+                                 <div class="circle circle-success circle-lg"></div>
+                              </div>
+                           </div>
+                           <div class="user-block-info">
+                              <div class="user-block-name">欢迎 欢迎</div>
+                              <div class="user-block-role">暂无简介</div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="nav-heading ">主导航</li>
+                  <li class=" ">
+                     <a href="home.html" title="首页">
+                        <em class="icon-home"></em>
+                        <span>首页</span>
+                     </a>
+                  </li>
+                  <li class=" ">
+                     <a href="unread.html" title="未读列表">
+                        <div class="label label-success pull-right">1</div>
+                        <em class="icon-paper-clip"></em>
+                        <span>未读列表</span>
+                     </a>
+                  </li>
+                  <li class=" ">
+                     <a href="#favorites" title="收藏夹" data-toggle="collapse">
+                        <em class="icon-folder"></em>
+                        <span>收藏夹</span>
+                     </a>
+                     <ul id="favorites" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">收藏夹</li>
+                        <li class=" ">
+                           <a href="new_fav.html" title="+ 新建收藏夹">
+                              <span>+ 新建收藏夹</span>
+                           </a>
+                        </li>
+                        <li class=" ">
+                           <a href="fav.html" title="学习">
+                              <div class="text-muted mr pull-right">8</div>
+                              <span>学习</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class=" ">
+                     <a href="explore.html" title="发现">
+                        <em class="icon-compass"></em>
+                        <span>发现</span>
+                     </a>
+                  </li>
+                  <li class=" ">
+                     <a href="#groups" title="群组" data-toggle="collapse">
+                        <em class="icon-folder"></em>
+                        <span>群组</span>
+                     </a>
+                     <ul id="groups" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">群组</li>
+                        <li class=" ">
+                           <a href="new_group.html" title="+ 新建群组">
+                              <span>+ 新建群组</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-heading ">更多</li>
+                  <li class=" ">
+                     <a href="collect_tool.html" title="网页收集工具">
+                        <em class="icon-wrench"></em>
+                        <span>网页收集工具</span>
+                     </a>
+                  </li>
+                  <li class=" ">
+                     <a href="mobile.html" title="移动客户端">
+                        <em class="icon-screen-smartphone"></em>
+                        <span>移动客户端</span>
+                     </a>
+                  </li>
+                  <li class=" ">
+                     <a href="import.html" title="导入收藏夹">
+                        <em class="icon-login"></em>
+                        <span>导入收藏夹</span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </aside>
+      <aside class="offsidebar hide">
+         <h3 class="text-center">设置</h3>
+         <div class="p-lg text-center">
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#modal-defaultFav" class="btn btn-default btn-block"> <strong>默认收藏夹(未读列表)</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="#" class="btn btn-default btn-block"> <strong>默认公开收藏（点击切换）</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="#" class="btn btn-default btn-block">
+               <strong>收藏时显示简单模式</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#modal-changeDescription" class="btn btn-default btn-block">
+               <strong>修改个人简介</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="#" class="btn btn-default btn-block">
+               <strong>修改头像</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="#" data-toggle="modal" data-target="#modal-changeNickname" class="btn btn-default btn-block">
+               <strong>修改昵称</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="#" data-toggle="modal" data-target="#modal-changePass" class="btn btn-default btn-block">
+               <strong>修改密码</strong>
+            </a>
+         </div>
+         <div class="p-lg text-center">
+            <a href="#" class="btn btn-danger btn-block">
+               <strong>注销</strong>
+            </a>
+         </div>
+      </aside>
+      <section>
+         <div class="content-wrapper">
+            <h3>
+               上传头像
+               <small>选择一个心仪的头像代表自己</small>
+            </h3>
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-lg-3 col-md-3">
+                     <div class="panel">
+                        <div class="panel-heading">
+                           <a href="#" class="pull-right">
+                              <small class="fa fa-refresh text-muted"></small>
+                           </a>
+                           请选择一张图片
+                        </div>
+                        <div class="panel-body">
+                           <div class="form-group">
+                              <input id="cropper-file" type="file" class="form-control" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);">
+                              <div class="bootstrap-filestyle input-group">
+                                 <input id="cropper-file-url" type="text" class="form-control" disabled="">
+                                 <span class="group-span-filestyle input-group-btn">
+                                    <label for="cropper-file" class="btn btn-default">
+                                       <span class="fa fa-folder-open text-muted"></span>
+                                    </label>
+                                 </span>
+                              </div>
+                           </div>
+                           <br />
+                           <div id="cropper-preview" class="cropper-preview" data-text="截取的图像"></div>
+                        </div>
+                     </div>
+                     <button id="cropper-submit" class="btn btn-primary btn-block" disabled="disabled" type="submit">提交</button>
+                  </div>
+                  <div class="col-lg-9 col-md-9">
+                     <div class="panel">
+                        <div class="panel-body">
+                           <div class="cropper-area">
+                              <img id="cropper-image" src="" alt=""></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <span>&copy; 2016 - Favorites</span>
+         <span class="pull-right">
+            沪ICP备11037833号 | 联系邮箱：
+            <a href="#">contact@favorites.info</a>
+         </span>
+      </footer>
+   </div>
+   <script src="../vendor/modernizr/modernizr.custom.js"></script>
+   <script src="../vendor/jquery/dist/jquery.js"></script>
+   <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
+   <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <script src="../vendor/cropper/cropper.min.js"></script>
+   <script src="js/app.js"></script>
+   <div id="modal-changeSharing" class="modal fade">
+      <div class="modal-dialog wd-xl">
+         <div class="modal-content">
+            <div class="panel panel-dark panel-flat">
+               <div class="panel-heading text-center">
+                  <button class="close" data-dismiss="modal" type="button" style="color:#fff;">
+                     <span>×</span>
+                  </button>
+                  <a href="#" style="color:#fff;">Favorites</a>
+               </div>
+               <div class="panel-body">
+                  <form class="form-horizontal">
+                     <div class="mb">
+                        收藏备注
+                        <textarea name="" id="" class="form-control" cols="30" rows="2" placeholder="请输入收藏备注，也可以在这里@好友"></textarea>
+                     </div>
+                     <div class="pull-right dropdown dropdown-list">
+                        <a href="#" data-toggle="dropdown">
+                           at好友 <i class="fa fa-caret-down"></i>
+                        </a>
+                     </div>
+                     <label style="font-weight:normal;margin-bottom:0;">
+                        <input type="checkbox" class="mb">私密收藏</label>
+                  </form>
+                  <p class="pt-lg text-center">选择一个收藏夹</p>
+                  <select name="" id="" class="mb form-control">
+                     <option value="未读列表">未读列表</option>
+                  </select>
+                  <p class="text-center">或者</p>
+                  <input type="text" class="mb form-control" placeholder="新建分类收藏夹">
+                  <button type="submit" class="mt-lg btn btn-primary btn-block">提交</button>
+                  <div class="text-right mt-sm">
+                     <a href="collect_expert.html" style="color:#666;text-decoration:none;"> <i class="fa fa-refresh"></i>
+                        切换成专家模式
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="modal-remove" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">删除收藏</h4>
+            </div>
+            <div class="modal-body">
+               <p>该收藏将被永久删除，且无法找回，是否继续？</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-primary">确定</button>
+               <button type="button" data-dismiss="modal" class="btn btn-danger">取消</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="modal-defaultFav" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">选择默认收藏夹</h4>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <select name="" id="" class="form-control">
+                     <option value="未读列表">未读列表</option>
+                  </select>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-primary">确定</button>
+               <button type="button" data-dismiss="modal" class="btn btn-warning">取消</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="modal-changeDescription" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">修改个人简介</h4>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <textarea name="" id="" class="form-control" cols="30" rows="2"></textarea>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-primary">确定</button>
+               <button type="button" data-dismiss="modal" class="btn btn-warning">取消</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="modal-changeNickname" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">修改昵称</h4>
+            </div>
+            <div class="modal-body">
+               <div class="alert alert-danger text-center">该昵称已存在</div>
+               <div class="form-group has-feedback">
+                  <input type="text" placeholder="新昵称" class="form-control">
+                  <span class="fa fa-user form-control-feedback text-muted"></span>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-block btn-primary mt-lg">确定</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="modal-changePass" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">修改密码</h4>
+            </div>
+            <div class="modal-body">
+               <div class="alert alert-danger text-center">密码输入错误</div>
+               <div class="form-group has-feedback">
+                  <input type="password" placeholder="旧密码" class="form-control">
+                  <span class="fa fa-lock form-control-feedback text-muted"></span>
+               </div>
+               <div class="form-group has-feedback">
+                  <input type="password" placeholder="新密码" class="form-control">
+                  <span class="fa fa-lock form-control-feedback text-muted"></span>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-block btn-primary mt-lg">确定</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="result"></div>
+   <script>
+      $(document).ready(function(){
+         var $cropperImage = $('#cropper-image');
+         var $cropperFile = $('#cropper-file');
+         var $cropperFileUrl = $('#cropper-file-url');
+         var $cropperSubmit = $('#cropper-submit');
+         var $cropperPreview = $('.cropper-preview');
+         var URL = window.URL || window.webkitURL;
+         var blobURL;
+         var croppable = false;
+
+         $cropperSubmit.prop('disabled', true);
+
+         $cropperImage.cropper({
+            aspectRatio: 1 / 1,
+            viewMode: 1,
+            preview: $cropperPreview,
+            background: false,
+            mouseWheelZoom: false,
+            built: function () {
+             croppable = true;
+           }
+         });
+
+         if(URL){
+            $cropperFile.change(function(){
+               var files = this.files;
+               var file;
+               if(!$cropperImage.data('cropper')){
+                  return;
+               }
+               if(files && files.length){
+                  file = files[0];
+                  if(/^image\/\w+$/.test(file.type)){
+                     blobURL = URL.createObjectURL(file);
+                     $cropperFileUrl.val($cropperFile.val());
+                     $cropperSubmit.prop('disabled', false);
+                     $cropperImage.one('built.cropper', function(){
+                        URL.revokeObjectURL(blobURL);
+                     }).cropper('reset').cropper('replace', blobURL);
+                     $cropperFile.val('');
+                  }else{
+                     window.alert('请选择一个图像文件。');
+                  }
+               }
+            });
+         }else{
+            $cropperFile.prop('disabled', true);
+         }
+
+         function getrectangleCanvas(sourceCanvas){
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+            var width = 200;
+            var height = 200;
+
+            canvas.width = width;
+            canvas.height = height;
+            context.beginPath();
+            context.rect(0, 0, width, height);
+            context.strokeStyle = 'rgba(0,0,0,0)';
+            context.stroke();
+            context.clip();
+            context.drawImage(sourceCanvas, 0, 0, width, height);
+
+            return canvas;
+         }
+
+         $cropperSubmit.on('click', function(){
+			var croppedCanvas;
+			var rectangleCanvas;
+			if(!croppable){
+			 return;
+			}
+			croppedCanvas = $cropperImage.cropper('getCroppedCanvas');
+			rectangleCanvas = getrectangleCanvas(croppedCanvas);
+			alert(rectangleCanvas.toDataURL())
+         });
+
+      });
+   </script>
+</body>
+</html>
