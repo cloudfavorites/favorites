@@ -380,7 +380,7 @@
                                              评论(0)
                                           </a>
                                           |
-                                          <a class="sharing-action-button">
+                                          <a href="javascript:void(0);" data-toggle="modal" data-target="#modal-loginTips" class="sharing-action-button">
                                              <span class="fa fa-spoon"></span>
                                              挖一口
                                           </a>
@@ -841,6 +841,24 @@
          </div>
       </div>
    </div>
+   <div id="modal-loginTips" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" data-dismiss="modal" class="close">
+                  <span>&times;</span>
+               </button>
+               <h4 class="modal-title">请登录</h4>
+            </div>
+            <div class="modal-body">
+               <p>您还没有登录，请先 <a href="#" class="btn btn-primary btn-sm">登录</a> 或 <a href="#" class="btn btn-default btn-sm">注册</a></p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" data-dismiss="modal" class="btn btn-danger">取消</button>
+            </div>
+         </div>
+      </div>
+   </div>
    <script>
       $(document).ready(function(){
          $(".timeline-alt li").each(function(){
@@ -855,6 +873,7 @@
          });
       });
    </script>
+   <div class="go-top"></div>
    <div class="-mob-share-ui -mob-share-ui-theme -mob-share-ui-theme-slide-bottom" style="display: none">
       <ul class="-mob-share-list">
          <li class="-mob-share-weibo">
