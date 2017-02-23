@@ -1,12 +1,12 @@
 /*!
- * 
+ *
  * Angle - Bootstrap Admin App + jQuery
- * 
+ *
  * Version: 3.3
  * Author: @themicon_co
  * Website: http://themicon.co
  * License: https://wrapbootstrap.com/help/licenses
- * 
+ *
  */
 
 
@@ -17,10 +17,10 @@
   $(function(){
 
     // Restore body classes
-    // ----------------------------------- 
+    // -----------------------------------
     var $body = $('body');
     new StateToggler().restoreState( $body );
-    
+
     // enable settings toggle after restore
     $('#chk-fixed').prop('checked', $body.hasClass('layout-fixed') );
     $('#chk-collapsed').prop('checked', $body.hasClass('aside-collapsed') );
@@ -29,7 +29,7 @@
     $('#chk-hover').prop('checked', $body.hasClass('aside-hover') );
 
     // When ready display the offsidebar
-    $('.offsidebar.hide').removeClass('hide');  
+    $('.offsidebar.hide').removeClass('hide');
 
   }); // doc ready
 
@@ -37,26 +37,26 @@
 })(window, document, window.jQuery);
 
 // Start Bootstrap JS
-// ----------------------------------- 
+// -----------------------------------
 
 (function(window, document, $, undefined){
 
   $(function(){
 
     // POPOVER
-    // ----------------------------------- 
+    // -----------------------------------
 
     $('[data-toggle="popover"]').popover();
 
     // TOOLTIP
-    // ----------------------------------- 
+    // -----------------------------------
 
     $('[data-toggle="tooltip"]').tooltip({
       container: 'body'
     });
 
     // DROPDOWN INPUTS
-    // ----------------------------------- 
+    // -----------------------------------
     $('.dropdown input').on('click focus', function(event){
       event.stopPropagation();
     });
@@ -78,7 +78,7 @@
   $(document).on('click', Selector, function (e) {
       e.preventDefault();
       var key = $(this).data('resetKey');
-      
+
       if(key) {
         $.localStorage.remove(key);
         // reload the page
@@ -92,7 +92,7 @@
 }(jQuery, window, document));
 
 // GLOBAL CONSTANTS
-// ----------------------------------- 
+// -----------------------------------
 
 
 (function(window, document, $, undefined){
@@ -115,7 +115,7 @@
     'gray-light':             '#e4eaec',
     'gray-lighter':           '#edf1f2'
   };
-  
+
   window.APP_MEDIAQUERY = {
     'desktopLG':             1200,
     'desktop':                992,
@@ -127,7 +127,7 @@
 
 
 // TRANSLATION
-// ----------------------------------- 
+// -----------------------------------
 
 (function(window, document, $, undefined){
 
@@ -161,7 +161,7 @@
       currLang = $(this).data('setLang');
 
       if ( currLang ) {
-        
+
         opts.language = currLang;
 
         setLanguage(opts);
@@ -170,7 +170,7 @@
       }
 
     });
-    
+
 
     function setLanguage(options) {
       $("[data-localize]").localize(packName, options);
@@ -190,16 +190,16 @@
 })(window, document, window.jQuery);
 
 // NAVBAR SEARCH
-// ----------------------------------- 
+// -----------------------------------
 
 
 (function(window, document, $, undefined){
 
   $(function(){
-    
+
     var navSearch = new navbarSearchInput();
-    
-    // Open search input 
+
+    // Open search input
     var $searchOpen = $('[data-search-open]');
 
     $searchOpen
@@ -216,7 +216,7 @@
         if (e.keyCode == 27) // ESC
           navSearch.dismiss();
       });
-      
+
     // click anywhere closes the search
     $(document).on('click', navSearch.dismiss);
     // dismissable options
@@ -230,13 +230,13 @@
     var navbarFormSelector = 'form.navbar-form';
     return {
       toggle: function() {
-        
+
         var navbarForm = $(navbarFormSelector);
 
         navbarForm.toggleClass('open');
-        
+
         var isOpen = navbarForm.hasClass('open');
-        
+
         navbarForm.find('input')[isOpen ? 'focus' : 'blur']();
 
       },
@@ -254,7 +254,7 @@
 
 })(window, document, window.jQuery);
 // SIDEBAR
-// ----------------------------------- 
+// -----------------------------------
 
 
 (function(window, document, $, undefined){
@@ -272,9 +272,9 @@
     $body    = $('body');
     $sidebar = $('.sidebar');
     mq       = APP_MEDIAQUERY;
-    
-    // AUTOCOLLAPSE ITEMS 
-    // ----------------------------------- 
+
+    // AUTOCOLLAPSE ITEMS
+    // -----------------------------------
 
     var sidebarCollapse = $sidebar.find('.collapse');
     sidebarCollapse.on('show.bs.collapse', function(event){
@@ -284,10 +284,10 @@
         sidebarCollapse.filter('.in').collapse('hide');
 
     });
-    
-    // SIDEBAR ACTIVE STATE 
-    // ----------------------------------- 
-    
+
+    // SIDEBAR ACTIVE STATE
+    // -----------------------------------
+
     // Find current active item
     var currentItem = $('.sidebar .active').parents('li');
 
@@ -304,7 +304,7 @@
     });
 
     // SIDEBAR COLLAPSED ITEM HANDLER
-    // ----------------------------------- 
+    // -----------------------------------
 
 
     var eventName = isTouch() ? 'click' : 'mouseenter' ;
@@ -316,7 +316,7 @@
         subNav.trigger('mouseleave');
         subNav = toggleMenuItem( $(this) );
 
-        // Used to detect click and touch events outside the sidebar          
+        // Used to detect click and touch events outside the sidebar
         sidebarAddBackdrop();
       }
 
@@ -336,7 +336,7 @@
             ! $target.is('#user-block-toggle') && // user block toggle anchor
             ! $target.parent().is('#user-block-toggle') // user block toggle icon
           ) {
-                $body.removeClass('aside-toggled');          
+                $body.removeClass('aside-toggled');
         }
 
       });
@@ -351,7 +351,7 @@
     });
   }
 
-  // Open the collapse sidebar submenu items when on touch devices 
+  // Open the collapse sidebar submenu items when on touch devices
   // - desktop only opens on hover
   function toggleTouchItem($element){
     $element
@@ -362,13 +362,13 @@
   }
 
   // Handles hover to open items under collapsed menu
-  // ----------------------------------- 
+  // -----------------------------------
   function toggleMenuItem($listItem) {
 
     removeFloatingNav();
 
     var ul = $listItem.children('ul');
-    
+
     if( !ul.length ) return $();
     if( $listItem.hasClass('open') ) {
       toggleTouchItem($listItem);
@@ -381,7 +381,7 @@
     var mar = parseInt( $asideInner.css('padding-top'), 0) + parseInt( $aside.css('padding-top'), 0);
 
     var subNav = ul.clone().appendTo( $aside );
-    
+
     toggleTouchItem($listItem);
 
     var itemTop = ($listItem.position().top + mar) - $sidebar.scrollTop();
@@ -538,13 +538,13 @@
 
 /**=========================================================
  * Module: utils.js
- * jQuery Utility functions library 
+ * jQuery Utility functions library
  * adapted from the core of UIKit
  =========================================================*/
 
 (function($, window, doc){
     'use strict';
-    
+
     var $html = $("html"), $win = $(window);
 
     $.support.transition = (function() {
@@ -702,8 +702,23 @@
     $html.addClass($.support.touch ? "touch" : "no-touch");
 
 }(jQuery, window, document));
+
+
+(function(window, document, $, undefined){
+
+  $(function(){
+
+    $('.go-top').on('click', function(){
+      $('body, html').animate({ scrollTop: 0 });
+    });
+
+  });
+
+})(window, document, window.jQuery);
+
+
 // Custom jQuery
-// ----------------------------------- 
+// -----------------------------------
 
 
 (function(window, document, $, undefined){
@@ -715,3 +730,5 @@
   });
 
 })(window, document, window.jQuery);
+
+
